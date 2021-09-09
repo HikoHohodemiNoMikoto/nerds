@@ -1,0 +1,99 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box; /* шоб задавать розмери не контента а самого блока */
+}
+
+ul {
+    list-style: none; /* убрав стілізацію списків с начала ней не пользуюсь */
+}
+a {
+    text-decoration: none; /* убрав стілізацію підкреслювання і цвет силок */
+    color: #000000;
+}
+body {
+    margin: 0 auto; /* вировняв блок по центру */
+    font-family: 'Roboto', sans-serif; /*задав шрифт взяв на гуглфонт*/
+    font-size: 16px; /* більшість тексту написано на сторінкі 16 шрифтом */
+    line-height: 1.6; /* стандартна */
+    color: #000000;
+}
+
+h1, h2, h3, h4, h5, h6 { /* задав для всіх завголовків виравнювання по центру*/
+    margin: 0 auto;
+}
+
+/* Container */
+
+.container { /* задав общій контейнер якому задав розмери і засунув в нього  шапку*/
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* start */
+.beginning { /* зделв начало тоесть це наший фон і поставив йому параметри висоти і ширини*/
+    width: 100%;
+    height: 100vh;
+    background: #eeeeee;
+}
+
+/* header */
+
+.header { /* шапка  спозіорнірував її абсолютно і поставив поверх всих обєктів*/
+    width: 100%;
+    padding-top: 49px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+.header__cap { /* вировняв навігацію і логотип в одну лінію, по їдею сюда добавиться ще й корзина */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__logo {
+    width: 160px;
+    height: 65px;
+
+}
+/* nav */
+
+.nav {
+    text-transform: uppercase;
+}
+.nav__link {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 24px;
+    position: relative;
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.2s linear;
+}
+
+.nav__link:after {
+    content: "";
+    display: none;
+    width: 100%;
+    height: 2px;
+    background-color: #fb565a;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+}
+.nav__link:hover {
+    color: #fb565a;
+
+}
+.nav__link:active {
+    color: #a6a6a6;
+    transform: translateY(1px);
+
+}
+.nav__link:active:after {
+    display: block;
+}
