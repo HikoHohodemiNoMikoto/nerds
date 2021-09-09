@@ -1,0 +1,2 @@
+# nerds
+practic project
