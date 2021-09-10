@@ -64,7 +64,9 @@ h1, h2, h3, h4, h5, h6 { /* задав для всіх завголовків в
 .nav {
     text-transform: uppercase;
 }
-.nav__link {
+.nav__link,
+.disabled,
+.enabled {
     display: inline-block;
     vertical-align: top;
     margin: 0 24px;
@@ -74,9 +76,9 @@ h1, h2, h3, h4, h5, h6 { /* задав для всіх завголовків в
     transition: color 0.2s linear;
 }
 
-.nav__link:after {
+.enabled:after {
     content: "";
-    display: none;
+    display: block;
     width: 100%;
     height: 2px;
     background-color: #fb565a;
@@ -85,15 +87,15 @@ h1, h2, h3, h4, h5, h6 { /* задав для всіх завголовків в
     left: 0;
     z-index: 1;
 }
-.nav__link:hover {
+.nav__link:hover,
+.enabled:hover:before {
     color: #fb565a;
 
 }
-.nav__link:active {
+.nav__link:active,
+.enabled:active:before {
+
     color: #a6a6a6;
     transform: translateY(1px);
 
-}
-.nav__link:active:after {
-    display: block;
 }
