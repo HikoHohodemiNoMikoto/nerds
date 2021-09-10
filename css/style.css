@@ -88,12 +88,12 @@ h1, h2, h3, h4, h5, h6 { /* задав для всіх завголовків в
     z-index: 1;
 }
 .nav__link:hover,
-.enabled:hover:before {
+.enabled:hover {
     color: #fb565a;
 
 }
 .nav__link:active,
-.enabled:active:before {
+.enabled:active {
 
     color: #a6a6a6;
     transform: translateY(1px);
